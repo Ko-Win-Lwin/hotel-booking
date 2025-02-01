@@ -74,7 +74,7 @@ The application will be accessible at `http://localhost:8000` by default.
   php artisan cache:clear
   ```
 
-
+---
 
   
 # Frontend Setup (Vue.js)
@@ -99,6 +99,8 @@ npm install
 npm run dev
 ```
 
+--- 
+
 
 # Limitations or Incomplete Features
 
@@ -114,6 +116,34 @@ However, due to limited experience with frontend-backend integration, I encounte
 - Refactor the authentication flow for seamless integration.
 
 This will be addressed and fixed in future updates.
+
+## Incomplete Feature 1: Admin Feature CRUD and Dashboard
+### Current Status:
+- CRUD operations and dashboard functionalities are partially implemented.
+- Admin UI is incomplete.
+
+### Issues Faced:
+- Incomplete UI for data management.
+- Missing essential features like user management and detailed analytics.
+
+### Planned Improvements:
+- Complete the CRUD operations for all admin-related data.
+- Develop a more comprehensive dashboard with real-time data.
+- Improve the admin UI/UX for better usability.
+
+---
+
+## Incomplete Feature 3: User Registration
+### Current Status:
+- User registration process is incomplete with minimal validation.
+- Limited user feedback on input errors.
+
+### Issues Faced:
+- Basic registration form.
+
+### Planned Improvements:
+- Improve error feedback for users.
+- Implement features like email verification and password strength indicators.
 
 
 

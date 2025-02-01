@@ -54,7 +54,7 @@ DB_PASSWORD=
 ## 4. Run Migrations
 
 ```bash
-php artisan migrate
+php artisan migrate:refresh --seed
 ```
 
 This will create the necessary database tables.

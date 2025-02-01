@@ -146,6 +146,18 @@ This will be addressed and fixed in future updates.
 - Implement features like email verification and password strength indicators.
 
 
+---
+# Known Issues
+
+## Issue 1: Calendar Not Responsive on Mobile View
+- The calendar is not responsive in mobile view.
+
+## Issue 2: No Redirection to Booking Page Even When No Booking Exists
+- Even when there are no bookings, the system does not redirect to the booking page as expected.
+
+
+
+
 
 
 

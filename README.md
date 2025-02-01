@@ -74,6 +74,32 @@ The application will be accessible at `http://localhost:8000` by default.
   php artisan cache:clear
   ```
 
+
+
+  
+# Frontend Setup (Vue.js)
+
+Follow these steps to set up the Vue.js frontend.
+
+## 1. Navigate to the Frontend Folder
+
+```bash
+cd hotel-booking-system/frontend
+```
+
+## 2. Install Dependencies
+
+```bash
+npm install
+```
+
+## 3. Start the Vue Development Server
+
+```bash
+npm run serve
+```
+
+
    
 
 

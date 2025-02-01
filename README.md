@@ -16,7 +16,7 @@ A hotel booking system built using Vue.js for the frontend and Laravel for the b
 1. Clone the repository.
 
 ```bash
-git clone https://github.com/your-username/hotel-booking-system.git
+git clone https://github.com/Ko-Win-Lwin/hotel-booking.git
 ```
 
 # Laravel Setup Instructions

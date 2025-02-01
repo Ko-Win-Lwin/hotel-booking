@@ -117,7 +117,7 @@ However, due to limited experience with frontend-backend integration, I encounte
 
 This will be addressed and fixed in future updates.
 
-## Incomplete Feature 1: Admin Feature CRUD and Dashboard
+## Incomplete Feature 2: Admin Feature CRUD and Dashboard
 ### Current Status:
 - CRUD operations and dashboard functionalities are partially implemented.
 - Admin UI is incomplete.

@@ -13,7 +13,66 @@ A hotel booking system built using Vue.js for the frontend and Laravel for the b
   
 ## Setup Instructions
 
-### Backend Setup (Laravel):
 1. Clone the repository.
    ```bash
    git clone https://github.com/your-username/hotel-booking-system.git
+
+# Laravel Setup Instructions
+
+Follow these steps to set up the Laravel project.
+
+## 1. Navigate to the Backend Folder
+
+```bash
+cd hotel-booking-system/backend
+```
+
+## 2. Install Composer Dependencies
+
+```bash
+composer install
+```
+
+## 3. Create a `.env` File and Configure the Database
+
+```bash
+cp .env.example .env
+```
+
+Open the `.env` file in your preferred text editor and update the database configuration:
+
+```env
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=your_database_name
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+## 4. Run Migrations
+
+```bash
+php artisan migrate
+```
+
+This will create the necessary database tables.
+
+## 5. Start the Laravel Server
+
+```bash
+php artisan serve
+```
+
+The application will be accessible at `http://localhost:8000` by default.
+
+## Additional Commands
+
+- **Clear Cache:**
+  ```bash
+  php artisan cache:clear
+  ```
+
+   
+
+
+

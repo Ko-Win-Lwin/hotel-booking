@@ -96,7 +96,7 @@ npm install
 ## 3. Start the Vue Development Server
 
 ```bash
-npm run serve
+npm run dev
 ```
 
 

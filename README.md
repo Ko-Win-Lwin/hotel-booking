@@ -26,7 +26,7 @@ Follow these steps to set up the Laravel project.
 ## 1. Navigate to the Backend Folder
 
 ```bash
-cd hotel-booking-system/backend
+cd hotel-booking/backend/booking
 ```
 
 ## 2. Install Composer Dependencies
@@ -84,7 +84,7 @@ Follow these steps to set up the Vue.js frontend.
 ## 1. Navigate to the Frontend Folder
 
 ```bash
-cd hotel-booking-system/frontend
+cd hotel-booking/frontend/booking
 ```
 
 ## 2. Install Dependencies

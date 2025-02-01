@@ -4,8 +4,7 @@
 A hotel booking system built using Vue.js for the frontend and Laravel for the backend. Users can view available rooms, make bookings, and view booking statistics. Admins can manage rooms, bookings, and view statistical data.
 
 ## AI Tools Used
-- **Tool 1**: [Description of the tool and how it was used].
-- **Tool 2**: [Description of another AI tool, if applicable].
+- **Tool 1**: ChatGPT.
 
 ## Features
 - Users can view available rooms/slots.

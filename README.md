@@ -99,6 +99,7 @@ npm install
 npm run dev
 ```
 
+
 # Limitations or Incomplete Features
 
 ## Incomplete Feature 1: Authentication Implementation
@@ -108,7 +109,7 @@ Currently, the authentication feature is not fully implemented. Ideally, the bac
 However, due to limited experience with frontend-backend integration, I encountered errors and difficulties in implementing this feature. As a temporary solution, I am using the `user_id` to handle authentication and authorization processes.
 
 ### Planned Improvements:
-- Implement token-based authentication (e.g., JWT) to enhance security.
+- Implement token-based authentication to enhance security.
 - Properly store and manage tokens on the frontend.
 - Refactor the authentication flow for seamless integration.
 

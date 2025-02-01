@@ -44,7 +44,7 @@ const routes = [
         next('/login'); // Redirect to login if not logged in
       } else {
         try {
-          const response = await axios.get("/bookings", {
+          const response = await axios.get("/my-bookings", {
             headers: {
               'Authorization': `Bearer ${user_id}`,
               'Content-Type': 'application/json',
@@ -76,14 +76,14 @@ const routes = [
       }
 
       try {
-        const response = await axios.get("/bookings", {
+        const response = await axios.get("/my-bookings", {
           headers: {
             'Authorization': `Bearer ${user_id}`,
             'Content-Type': 'application/json',
           },
         });
 
-        if (response.data.length >= 1) {
+        if (response.data.length > 0) {
           next('/my-bookings'); // If the user already has a booking, redirect to my-bookings
         } else {
           next(); // Otherwise, allow access to booking page

@@ -3,7 +3,9 @@ import DateInput from '../components/Inputs/DateInput.vue'
 import Button from '../components/Buttons/Button.vue'
 import { reactive, ref } from 'vue';
 import axios from 'axios';
+import { useRouter } from 'vue-router';
 
+const router = useRouter();
 const availableRooms = ref([])
 
 const booking = reactive({
@@ -25,7 +27,7 @@ const findRoom = async () => {
             }
 
         })
-        .then(response => availableRooms.value = response.data.rooms)
+            .then(response => availableRooms.value = response.data.rooms)
     } catch (error) {
         console.error(error.response ? error.response.data : error.message)
     }
@@ -34,7 +36,6 @@ const findRoom = async () => {
 
 const book = async (room) => {
     const user_id = localStorage.getItem('user')
-    console.log(user_id)
     try {
         const response = await axios.post('/bookings', {
         room_id: room.id,
@@ -47,6 +48,8 @@ const book = async (room) => {
                 'Authorization': `Bearer ${user_id}`
             }
         }).then(response => console.log(response.data.message))
+        router.push("/my-bookings")
+        
     } catch (error) {
         console.error("Booking Failed", error.response ? error.response.data : error.message);
     }
@@ -55,7 +58,7 @@ const book = async (room) => {
 
 <template>
     <div class="">
-        <div class="max-w-80 mx-auto border rounded py-4 shadow-sm">
+        <div class="mt-8 max-w-80 mx-auto border rounded py-4 shadow-sm">
             <h1 class="text-center text-3xl font-bold text-blue-500">Book Your Stay</h1>
             <div class="px-2 text-white font-bold">
                 <!-- Check In -->
@@ -82,10 +85,10 @@ const book = async (room) => {
 
         </div>
 
-        <div class="mt-8 w-full mx-auto px-4">
+        <div v-if="availableRooms.length" class="mt-8 w-full mx-auto px-4">
             <h1 class="text-center text-3xl font-bold text-blue-500">Available Rooms</h1>
             <div class="border-t my-4"></div>
-            <div class="grid grid-cols-4 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 <div v-for="room in availableRooms" class="border pb-2 text-gray-600 " :key="room.id">
                     <img :src="room.image" class="w-full h-56 mx-auto"/>
                     <div class="flex justify-between px-2"><span class="font-bold">Number</span>#{{ room.number }}</div>

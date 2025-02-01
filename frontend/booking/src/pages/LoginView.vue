@@ -35,7 +35,7 @@ const login = async () => {
 </script>
 
 <template>
-    <div class="max-w-80 mx-auto shadow-sm">
+    <div class="max-w-80 mx-auto shadow-sm mt-8">
         <div class="border rounded py-4 ">
             <h1 class="text-center text-3xl font-bold text-blue-500">Login</h1>
             <div class="px-2 text-white font-bold">

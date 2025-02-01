@@ -26,6 +26,10 @@ watch(route, () => {
     user.value = localStorage.getItem('user')
 })
 
+watch(bookings, async () => {
+    bookings.value = await useMyBookings();
+})
+
 const logout = () => {
     localStorage.removeItem('user')
     router.push('/')
@@ -59,7 +63,7 @@ onMounted(async () => {
                 </RouterLink>
             </div>
 
-            <RouterLink v-if="user" to="/my-bookings" class="sm:ml-3">
+            <RouterLink v-if="user" to="/my-bookings" class="sm:ml-3 hidden md:block">
                 <NavBtn label="My Bookings"
                     :class="['bg-indigo-600', 'text-white', 'hover:bg-indigo-500', 'focus-visible:outline-2', 'focus-visible:outline-offset-2', 'focus-visible:outline-indigo-600']">
                 </NavBtn>
@@ -82,8 +86,11 @@ onMounted(async () => {
 
             <!-- Dropdown -->
             <DropdownBtn label="More">
-                <DropdownLink path="/login" label="Login"></DropdownLink>
-                <DropdownLink path="/signup" label="Sign Up"></DropdownLink>
+                <DropdownLink v-if="!user" path="/login" label="Login"></DropdownLink>
+                <DropdownLink v-if="!user" path="/signup" label="Sign Up"></DropdownLink>
+                <DropdownLink v-if="user" path="/logout" label="Logout"></DropdownLink>
+                <DropdownLink v-if="user && bookings.length" path="/my-bookings" label="My Bookings"></DropdownLink>
+
             </DropdownBtn>
         </div>
     </div>

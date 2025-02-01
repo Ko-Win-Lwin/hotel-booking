@@ -4,11 +4,15 @@ import useMyBookings from "../store/mybookings";
 import Button from "../components/Buttons/Button.vue";
 import axios from "axios";
 import { watch } from "vue";
+import { useRoute, useRouter } from "vue-router";
+
 const bookings = ref([])
+const route = useRoute()
 
 watch(bookings, async () => {
     await getBooking(); 
 })
+
 const getBooking = async () => {
     try {
         bookings.value = await useMyBookings();  // Update the ref with fetched bookings
@@ -26,7 +30,9 @@ const cancelBooking = async (booking) => {
             "Content-Type": "application/json"
         }
     })
-    console.log(response.data.message)
+        console.log(response.data.message)
+
+    
     } catch (error) {
         console.error(error.response ? error.response.data : error.message  )
     }
@@ -39,7 +45,7 @@ onMounted(async () => {
 </script>
 
 <template>
-    <div class="max-w-80 mx-auto border rounded py-4 shadow-sm">
+    <div class="max-w-80 mx-auto border rounded py-4 shadow-sm mt-8">
             <h1 class="text-center text-3xl font-bold text-blue-500">My Bookings</h1>
             <div class="px-2 font-bold mt-4 space-y-4">
                 <div v-for="booking in bookings" class="border rounded p-4" :key="booking.id">

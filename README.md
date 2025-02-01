@@ -65,14 +65,14 @@ This will create the necessary database tables.
 php artisan serve
 ```
 
-The application will be accessible at `http://localhost:8000` by default.
+
 
 ## Additional Commands
 
 - **Clear Cache:**
-  ```bash
-  php artisan cache:clear
-  ```
+```bash
+php artisan cache:clear
+```
 
 ---
 
